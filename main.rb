@@ -8,13 +8,7 @@ require_relative 'food'
   puts "      '3' to remove an entry"
   puts "      '4' to exit"
 
-  def create(diary)
-    print "Enter food name: "
-    name = gets.chomp
-    print "Enter food type (fruit, veggie, or meat): "
-    type = gets.chomp
-    print "Enter the amount of calories: "
-    calories = gets.chomp 
+  def create(diary, name, type, calories)
     entry = Food.new(name, type, calories)
     puts "Entry added!"
     diary.push(entry)
@@ -48,7 +42,13 @@ require_relative 'food'
     number = gets.chomp.to_i
     case number
     when 1
-      create(diary)
+      print "Enter food name: "
+      name = gets.chomp
+      print "Enter food type (fruit, veggie, or meat): "
+      type = gets.chomp
+      print "Enter the amount of calories: "
+      calories = gets.chomp 
+      create(diary, name, type, calories)
     when 2
       display(diary)
     when 3

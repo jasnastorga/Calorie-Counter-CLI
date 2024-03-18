@@ -1,12 +1,14 @@
 require 'minitest/autorun'
-require_relative './food'
-require_relative './main'
+require_relative 'food'
 
-class TestCalculator < Minitest::Test
+#do not include in test file, main.rb contains 'gets' as this will force user input
+#require_relative 'main'
+
+class TestFood < Minitest::Test
   def test_food_inserting
-    entry = Food.new("apple","fruit","150")
-    assert_equal "orange", entry.name
-    assert_equal "fruit", entry.type
-    assert_equal "150", entry.calories
+    entry = Food.new("apple","fruit",150)
+    assert_equal "apple", entry.name, "name creation failed"
+    assert_equal "meat", entry.type, "incorrect food type"
+    assert_equal 150, entry.calories, "calorie creation failed"
   end
 end
