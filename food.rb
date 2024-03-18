@@ -1,5 +1,5 @@
 class Food
-  #data structure to hold Food objects
+
   def initialize(name, type, calories)
     @name = name
     @type = type
