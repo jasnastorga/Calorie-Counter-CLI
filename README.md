@@ -1,7 +1,5 @@
-# ruby-cli-template
+# Calorie-Counter-CLI
+A command line interface app that allows you to track, view, and delete your calories.
 
-Use this repository as a template for your Ruby CLI (command line interface) project.
-
-- Ruby version: `3.2.1`
-
-Run ruby main.rb in the terminal
+# Usage
+Run `ruby main.rb` in the terminal
